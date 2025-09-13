@@ -9,11 +9,45 @@
   <div id="main-content">
     <h1>Task Lister Lite™️</h1>
 
-    <form id="create-task-form" action="" method="POST">
-      <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
-      <input type="submit" value="Create New Task">
-    </form>
+    <fieldset>
+      <legend>New Task</legend>
+      <form id="create-task-form" action="" method="POST">
+        <label for="new-task-description">Task Description:</label>
+        <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+        <br>
+        <br>
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+          <option value="high">High</option>
+          <option value="medium" selected>Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <br>
+        <br>
+        <label for="task-user">Assigned To:</label>
+        <input id="task-user" name="task-user" type="text" placeholder="assignee">
+        <br>
+        <br>
+        <label for="due-date">Due Date:</label>
+        <input id="due-date" name="due-date" type="date">
+        <br>
+        <br>
+        <div style="text-align: center;">
+          <input type="submit" value="Create New Task">
+        </div>
+      </form>
+    </fieldset>
+
+    <br>
+
+    <div>
+      <label for="sort-select">Sort Tasks by Priority:</label>
+      <select id="sort-select">
+        <option value="" selected disabled>Select Sorting Order</option>
+        <option value="asc">Ascending (Low to High)</option>
+        <option value="desc">Descending (High to Low)</option>
+      </select>
+    </div>
 
     <div id="list">
       <h2>My Todos:</h2>
