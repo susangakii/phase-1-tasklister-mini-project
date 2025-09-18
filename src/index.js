@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dueDate = form.querySelector("#due-date")?.value || "N/A";
     const user = form.querySelector("#task-user")?.value || "N/A";
     valueInput(taskDescription, priority, dueDate, user);
-    form.reset();
+    form.reset(); 
   })
 
   if (sortSelect){
